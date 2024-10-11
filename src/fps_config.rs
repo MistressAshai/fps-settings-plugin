@@ -34,9 +34,8 @@ impl ConfigBasicMenuItemSwitchMethods for FPSSetting {
     }
 
     extern "C" fn set_command_text(this: &mut ConfigBasicMenuItem, _method_info: OptionalMethod) {
-        unsafe {
-            this.command_text = format!("{:}", CURRENT_FPS).into();
-        }
+        let current_fps = unsafe { CURRENT_FPS };
+        this.command_text = format!("{:}", current_fps).into();
     }
 
     extern "C" fn set_help_text(this: &mut ConfigBasicMenuItem, _method_info: OptionalMethod) {

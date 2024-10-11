@@ -71,14 +71,14 @@ dependencies = [
 
 [[package]]
 name = "engage"
-version = "0.6.3"
-source = "git+https://github.com/DivineDragonFanClub/engage#32fd5650070f5d944251d79ae4aa6f7601b75a19"
+version = "0.6.5"
+source = "git+https://github.com/DivineDragonFanClub/engage#e91461c62d70370fcb08cd7d9696dd2e3d49456a"
 dependencies = [
  "bitflags",
  "lazysimd",
  "modular-bitfield",
  "once_cell",
- "skyline",
+ "skyline 0.2.1 (git+https://github.com/Raytwo/skyline-rs?branch=preview)",
  "unity",
 ]
 
@@ -95,7 +95,7 @@ dependencies = [
  "cobapi",
  "engage",
  "phf",
- "skyline",
+ "skyline 0.2.1 (git+https://github.com/ultimate-research/skyline-rs)",
  "unity",
 ]
 
@@ -139,7 +139,7 @@ version = "0.1.0"
 source = "git+https://github.com/Raytwo/lazysimd#3effca0fd2ebcd95d9b4113f4290e5865aa43792"
 dependencies = [
  "lazysimd_macro",
- "skyline",
+ "skyline 0.2.1 (git+https://github.com/Raytwo/skyline-rs?branch=preview)",
 ]
 
 [[package]]
@@ -312,13 +312,34 @@ source = "git+https://github.com/Raytwo/skyline-rs?branch=preview#3ce8983f65b649
 dependencies = [
  "libc-nnsdk 0.2.0",
  "nnsdk",
- "skyline_macro",
+ "skyline_macro 0.2.0 (git+https://github.com/Raytwo/skyline-rs?branch=preview)",
+]
+
+[[package]]
+name = "skyline"
+version = "0.2.1"
+source = "git+https://github.com/ultimate-research/skyline-rs#ba4706a6faa1a705b37cc962826b0426d72bf604"
+dependencies = [
+ "libc-nnsdk 0.2.0",
+ "nnsdk",
+ "skyline_macro 0.2.0 (git+https://github.com/ultimate-research/skyline-rs)",
 ]
 
 [[package]]
 name = "skyline_macro"
 version = "0.2.0"
 source = "git+https://github.com/Raytwo/skyline-rs?branch=preview#3ce8983f65b649e58f20184bec176520846d4b2b"
+dependencies = [
+ "lazy_static",
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
+name = "skyline_macro"
+version = "0.2.0"
+source = "git+https://github.com/ultimate-research/skyline-rs#ba4706a6faa1a705b37cc962826b0426d72bf604"
 dependencies = [
  "lazy_static",
  "proc-macro2",
@@ -410,7 +431,7 @@ source = "git+https://github.com/DivineDragonFanClub/unity#fd79cc94bf0804bff544e
 dependencies = [
  "lazysimd",
  "memoffset",
- "skyline",
+ "skyline 0.2.1 (git+https://github.com/Raytwo/skyline-rs?branch=preview)",
  "thiserror",
  "unity-macro",
 ]
